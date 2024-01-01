@@ -1,0 +1,134 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#1b2631  ;  
+    font-family: Tahoma, Verdana, sans-serif;
+    color: #fff;
+}
+
+#canvas{
+    top: 30px;
+    right: 325px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* Controles para dibujar */
+.controls{
+    margin-top: 130px;
+    margin-left: 1000px;
+    width: 200px;
+    height: 100%;
+    background-color:  #2c3e50 ;
+    border-radius: 10px;
+}
+
+.inputRange,.Number{
+    position: relative;
+    bottom: 6px;
+    background-color:#233446;
+    color: #fff;
+    border: solid 0px;
+    height: 25px;
+    width: 50px;
+    border: solid 0px;
+    border-radius: 4px;
+}
+
+.inputColor,.inputColor2,.colorText,.color1,.color2,.color3{
+    border: solid 0px;
+    background-color:#233446;
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    margin: 10px 2px;
+}
+
+.inputColor,.color1{margin-left: 12px;}
+
+.Brush,.Delete,.shape,.clear,.download{
+    background-color:#283c52;
+    padding: 5px 8px;
+    width: 40px;
+    margin: 4px 11px;
+    border: solid 0px;
+    border-radius: 5px;
+    transition: background-color 0.30s;
+    transition:transform 0.30s ease ;
+}
+
+.clear,.download{
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #fff;
+    margin: 7px;
+    width: 185px;
+    height: 30px;
+    background-color:  #7d3c98 ;
+    box-shadow: #a95ed446 0px 2px;
+    transition: background-color 0.30s;
+}
+.box{
+    margin-left: 16px;
+}
+
+.download{
+    background-color:  #48c9b0;
+    box-shadow: #48c9af69 0px 2px;
+}
+
+/* Trasiciones */
+.Brush:hover,.shape:hover{
+    background-color: #3498db;
+    transform: scale(1.1);
+}
+.Delete:hover{
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Cotroles de texto */
+
+.Text{
+    position: relative;
+    color: #fff;
+    background-color:#233446;
+    height: 25px;
+    border: solid 0px;
+    border-radius: 4px;
+    margin: 5px 0px 5px 5px;
+    bottom: 6px;
+    width: 100px;
+}
+
+.Number{margin: 1px;}
+
+.Btntext{
+    position: relative;
+    bottom: 4px;
+    background-color: #48c9b0;
+    border: solid 0px;
+    border-radius: 4px;
+    padding: 4px 5px;
+    margin: 5px 2px;
+}
+
+.colorText{margin-left: 3px;}
+/* Titulos */
+.text1,.text2{margin: 10px;}
+
+/* interfaz de texto */
+
+.textInterface{
+    background-color: #2c3e50;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    border: solid 0px;
+    border-radius: 8px;
+    box-shadow: #2c3e5059 2px 1.9px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw WEB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="controls">
+        <span><label class="text1">Drawing tool</label></span><br>
+        <button class="Brush"><img src="image/editar.png"></button>
+        <button class="Brushes">M</button>
+        <button class="Delete"><img src="image/goma-de-borrar.png"></button>
+        <button class="shape" data-shape="rectangle"><img src="image/cuadrado.png"></button>
+        <button class="shape" data-shape="circle"><img src="image/circulo.png"></button>
+        <button class="shape" data-shape="triangle"><img src="image/triangulo.png"></button>
+        <button class="shape" data-shape="linea"><img src="image/linea-diagonal.png"></button>
+        <button class="shape" data-shape="oval"><img src="image/oval.png"></button><br>
+        <input type="checkbox" class="box"> Fill shapes<br>
+        <input type="color" class="inputColor">
+        <input type="color" value="#fff" class="inputColor2">
+        <input type="number" min="1" max="100" value ="1" class="inputRange"><br>
+        <label class="text1">Color Brushes</label><br>
+        <input type="color" class="color1">
+        <input type="color" class="color2">
+        <button class="clear">Clear canvas</button>
+        <button class="download">Download <img src="image/Descargas.png"></button>
+    </div>
+    
+    <div class="textInterface">
+        <input type="text" class="Text">
+        <input type="color" class="colorText">
+        <input type="number" min="0" class="Number">
+        <button class="Btntext"><img src="image/mas-simbolo-negro.png"></button>
+    </div>
+
+    <div class="canvasContainer">
+        <canvas id="canvas" width="900" height="600"></canvas>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="text.js"></script>
+</body>
+</html>

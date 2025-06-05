@@ -1,134 +1,167 @@
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#1b2631  ;  
+    background-color: #1c242c;
     font-family: Tahoma, Verdana, sans-serif;
     color: #fff;
+    min-height: 100vh; /* Ensures body takes full viewport height */
+    margin: 0; /* Removes default margins */
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
-#canvas{
-    top: 30px;
-    right: 325px;
-    position: absolute;
+#canvas {
+    position: relative; /* Changed from absolute to avoid fixed positioning issues */
+    width: 65vw; /* Scales with viewport width */
+    max-width: 90%; /* Prevents overflow on small screens */
+    aspect-ratio: 4/3; /* Maintains canvas proportion */
     border-radius: 10px;
     background-color: #fff;
 }
 
-/* Controles para dibujar */
-.controls{
-    margin-top: 130px;
-    margin-left: 1000px;
-    width: 200px;
-    height: 100%;
-    background-color:  #2c3e50 ;
+/* Controls for drawing */
+.controls {
+    position: fixed; /* Keeps controls fixed on the right */
+    right: 2vw; /* Relative to viewport width */
+    top: 18vh; /* Relative to viewport height */
+    width: 25vw; /* Scales with viewport */
+    min-width: 150px; /* Minimum width for usability */
+    max-width: 250px; /* Caps width for larger screens */
+    background-color: #13181d;
     border-radius: 10px;
+    padding: 1rem; /* Relative padding */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
-.inputRange,.Number{
+.inputRange, .Number {
     position: relative;
-    bottom: 6px;
-    background-color:#233446;
+    background-color: #13181d;
     color: #fff;
-    border: solid 0px;
-    height: 25px;
-    width: 50px;
-    border: solid 0px;
+    border: none; /* Simplified border syntax */
+    height: 2rem; /* Relative unit */
+    width: 25%; /* Scales within controls */
+    min-width: 50px; /* Minimum width for usability */
     border-radius: 4px;
+    margin-left: 0.5rem;
 }
 
-.inputColor,.inputColor2,.colorText,.color1,.color2,.color3{
-    border: solid 0px;
-    background-color:#233446;
+.inputColor, .inputColor2, .colorText {
+    border: none;
+    background-color: #13181d;
     border-radius: 5px;
-    width: 50px;
-    height: 30px;
-    margin: 10px 2px;
+    width: 30%; /* Scales within controls */
+    min-width: 50px;
+    height: 2rem;
+    margin: 0.3rem 0.8rem;
 }
 
-.inputColor,.color1{margin-left: 12px;}
 
-.Brush,.Delete,.shape,.clear,.download{
-    background-color:#283c52;
-    padding: 5px 8px;
-    width: 40px;
-    margin: 4px 11px;
-    border: solid 0px;
+.Brush, .Delete, .shape, .clear, .download {
+    background-color: #151616;
+    padding: 0.3rem 0.5rem;
+    width: 25%; /* Scales within controls */
+    min-width: 40px;
+    margin: 6px;
+    border: none;
     border-radius: 5px;
-    transition: background-color 0.30s;
-    transition:transform 0.30s ease ;
+    transition: background-color 0.3s, transform 0.3s ease;
 }
 
-.clear,.download{
+.clear, .download {
     font-family: sans-serif;
-    font-size: 15px;
+    font-size: 0.9rem; /* Relative font size */
     color: #fff;
-    margin: 7px;
-    width: 185px;
-    height: 30px;
-    background-color:  #7d3c98 ;
-    box-shadow: #a95ed446 0px 2px;
-    transition: background-color 0.30s;
-}
-.box{
-    margin-left: 16px;
+    margin: 0.4rem;
+    width: 90%; /* Nearly full width of controls */
+    height: 2rem;
+    background-color: #7d3c98;
+    box-shadow: 0 2px #a95ed446;
+    transition: background-color 0.3s;
 }
 
-.download{
-    background-color:  #48c9b0;
-    box-shadow: #48c9af69 0px 2px;
+.box {
+    margin-left: 1rem;
 }
 
-/* Trasiciones */
-.Brush:hover,.shape:hover{
+.download {
+    background-color: #48c9b0;
+    box-shadow: 0 2px #48c9af69;
+}
+
+/* Transitions */
+.Brush:hover, .shape:hover {
     background-color: #3498db;
     transform: scale(1.1);
 }
-.Delete:hover{
+
+.Delete:hover {
     background-color: #c0392b;
     transform: scale(1.1);
 }
 
-/* Cotroles de texto */
-
-.Text{
+/* Text controls */
+.Text {
     position: relative;
     color: #fff;
-    background-color:#233446;
-    height: 25px;
-    border: solid 0px;
+    background-color: #233446;
+    height: 2rem;
+    border: none;
     border-radius: 4px;
-    margin: 5px 0px 5px 5px;
-    bottom: 6px;
-    width: 100px;
+    margin: 0.3rem 0 0.3rem 0.3rem;
+    width: 60%; /* Scales within controls */
+    min-width: 100px;
 }
 
-.Number{margin: 1px;}
+.Number {
+    margin: 0.1rem;
+}
 
-.Btntext{
+.Btntext {
     position: relative;
-    bottom: 4px;
     background-color: #48c9b0;
-    border: solid 0px;
+    border: none;
     border-radius: 4px;
-    padding: 4px 5px;
-    margin: 5px 2px;
+    padding: 0.25rem 0.3rem;
+    margin: 0.3rem 0.1rem;
 }
 
-.colorText{margin-left: 3px;}
-/* Titulos */
-.text1,.text2{margin: 10px;}
+.colorText {
+    margin-left: 0.2rem;
+}
 
-/* interfaz de texto */
+/* Titles */
+.text1, .text2 {
+    margin: 0.6rem;
+}
 
-.textInterface{
+/* Text interface */
+.textInterface {
     background-color: #2c3e50;
     display: none;
-    position: absolute;
+    position: fixed; /* Changed to fixed for better positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centers the element */
     z-index: 1000;
     justify-content: center;
     align-items: center;
-    border: solid 0px;
+    border: none;
     border-radius: 8px;
-    box-shadow: #2c3e5059 2px 1.9px;
+    box-shadow: 2px 1.9px #2c3e5059;
+    padding: 1rem;
+    width: 80vw; /* Scales with viewport */
+    max-width: 400px; /* Caps width */
 }
+
+.inputContainer1, .inputContainer2, .inputContainer3 {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    gap: 10px; /* Espacio entre el input y el texto */
+}
+
+/* Asegura que los márgenes no interfieran */
+.inputColor, .inputColor2, .inputRange, p {
+    margin: 0; /* Elimina márgenes por defecto */
+    
+}
+

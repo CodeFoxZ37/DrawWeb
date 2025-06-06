@@ -151,7 +151,7 @@ canvas.addEventListener("mouseover", () => Drawing = false);
 
 // Inicializa el canvas y el fondo
 updateCanvasSize();
-canvas.style.background = Background.value; // Establece el fondo inicial
+canvas.style.background = "#ffff"; // Establece el fondo inicial
 
 // Limpia todo el lienzo
 clear.addEventListener("click", () => {

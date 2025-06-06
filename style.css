@@ -35,14 +35,14 @@ body {
 
 .inputRange, .Number {
     position: relative;
-    background-color: #13181d;
+    background-color: #1c1f22;
     color: #fff;
     border: none; /* Simplified border syntax */
     height: 2rem; /* Relative unit */
     width: 25%; /* Scales within controls */
     min-width: 50px; /* Minimum width for usability */
     border-radius: 4px;
-    margin-left: 0.5rem;
+    margin-left: 3.3px;
 }
 
 .inputColor, .inputColor2, .colorText {
@@ -160,7 +160,7 @@ body {
 }
 
 /* Asegura que los márgenes no interfieran */
-.inputColor, .inputColor2, .inputRange, p {
+.inputColor, .inputColor2, p {
     margin: 0; /* Elimina márgenes por defecto */
     
 }
